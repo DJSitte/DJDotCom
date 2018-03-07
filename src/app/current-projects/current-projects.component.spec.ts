@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopNavComponentComponent } from './top-nav-component.component';
+import { CurrentProjectsComponent } from './current-projects.component';
 
-describe('TopNavComponentComponent', () => {
-  let component: TopNavComponentComponent;
-  let fixture: ComponentFixture<TopNavComponentComponent>;
+describe('CurrentProjectsComponent', () => {
+  let component: CurrentProjectsComponent;
+  let fixture: ComponentFixture<CurrentProjectsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopNavComponentComponent ]
+      declarations: [ CurrentProjectsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopNavComponentComponent);
+    fixture = TestBed.createComponent(CurrentProjectsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

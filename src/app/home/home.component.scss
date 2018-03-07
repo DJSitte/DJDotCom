@@ -1,0 +1,30 @@
+@import '../../assets/scss/variables';
+
+.home-component{
+    text-align: center;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(black, .8);
+    padding-top: 40vh;
+}
+
+.home-subtext{
+    position: absolute;
+    bottom: 3vh;
+    z-index: 100;
+    width: 100vw;
+    text-align: center;
+}
+
+.home-background{
+    background-image: url("/assets/img/Milwaukee.jpg");
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    //height: calc(100vh - 64px);
+    height: 100vh;
+    //top: 64px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}

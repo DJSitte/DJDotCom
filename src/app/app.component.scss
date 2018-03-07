@@ -1,0 +1,18 @@
+@import '../assets/scss/variables';
+
+.app{
+    color: $fg-color;
+    background-color: $bg-color;
+    .top-bar .menu-link a{
+        color: $fg-color;
+    }
+    min-height: 100vh;
+}
+
+html{
+    background-color: $bg-color;
+}
+
+.dj-toolbar{
+    z-index: 1000;
+}
