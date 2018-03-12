@@ -3,17 +3,18 @@
 .app{
     color: $fg-color;
     background-color: rgba(black, .8);
-    height: 100%;
+    height: calc(100% + 20px);
 }
 
 .dj-toolbar{
     z-index: 1000;
+    position: fixed;
 }
 
 .background{
     background-image: url("/assets/img/Milwaukee.jpg");
     background-size: cover;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
