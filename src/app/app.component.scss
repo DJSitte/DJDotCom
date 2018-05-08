@@ -2,8 +2,7 @@
 
 .app{
     color: $fg-color;
-    background-color: rgba(black, .8);
-    height: calc(100% + 20px);
+    height: 100%;
 }
 
 .dj-toolbar{
@@ -13,6 +12,17 @@
 
 .background{
     background-image: url("/assets/img/Milwaukee.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.background-cover{
+    background-color: rgba(black, .8);
     background-size: cover;
     position: fixed;
     width: 100vw;
