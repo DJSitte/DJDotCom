@@ -1,9 +1,7 @@
-<div class="home-component">
-  <h1>D.J. Sitte</h1>
-  <h3>Software Engineer</h3>
-</div>
-<div class="home-subtext">
-  <h3>(Coming soon)</h3>
-</div>
-<div class="home-background">
+
+<div class="history"> 
+  <h2 class="heading-lines"><span>Education</span></h2>
+  <div *ngFor="let model of HistoryModels">
+    <app-history-card [Model]="model"></app-history-card>
+  </div>
 </div>

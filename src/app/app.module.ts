@@ -10,12 +10,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { CurrentProjectsComponent } from './current-projects/current-projects.component';
+import { HistoryCardComponent } from './history-card/history-card.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent},
-  { path: 'current-projects', component: CurrentProjectsComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full'}
+  { path: 'projects', component: CurrentProjectsComponent}
 ]
 
 @NgModule({
@@ -24,6 +24,7 @@ const appRoutes: Routes = [
     HomeComponent,
     EducationComponent,
     CurrentProjectsComponent,
+    HistoryCardComponent
   ],
   imports: [
     BrowserModule,

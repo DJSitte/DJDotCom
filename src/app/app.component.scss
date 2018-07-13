@@ -2,17 +2,44 @@
 
 .app{
     color: $fg-color;
-    background-color: $bg-color;
-    .top-bar .menu-link a{
-        color: $fg-color;
-    }
-    min-height: 100vh;
-}
-
-html{
-    background-color: $bg-color;
+    height: 100%;
 }
 
 .dj-toolbar{
     z-index: 1000;
+    position: fixed;
+}
+
+.background{
+    background-image: url("/assets/img/Milwaukee.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.background-cover{
+    background-color: rgba(black, .8);
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fill-remaining-toolbar{
+    flex: 1 1 auto;
+}
+
+.toolbar-link{
+    margin: 0 10px;
+    a{
+        color: $fg-color;
+        text-decoration: none;
+    }
 }
