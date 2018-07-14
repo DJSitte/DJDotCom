@@ -10,13 +10,38 @@
 }
 
 .home-card{
-    width: 700px;
     margin-right: auto;
     margin-left: auto;
     background-color: $fg-color;
     border: 3px solid $bg-color;
     margin-top: 20px;
     border-radius: 20px;
+    width: 700px;
+
+    .home-table-right{
+        color: $bg-color;
+        font-size: 26px;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .home-socials a {
+        color: $bg-color;
+    }
+}
+
+.home-mobile{
+    color: $fg-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    .home-table-right{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .home-socials a {
+        color: $fg-color;
+    }
 }
 
 .home-header{
@@ -34,18 +59,10 @@
     vertical-align: middle;
 }
 
-.home-table-right{
-    color: $bg-color;
-    font-size: 26px;
-    padding-right: 15px;
-    text-align: center;
-}
+
 
 .home-socials{
     font-size: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
-    a {
-        color: $bg-color;
-    }
 }

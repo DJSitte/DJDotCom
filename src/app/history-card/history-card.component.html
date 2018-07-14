@@ -1,15 +1,24 @@
-<div class="history-card">
-  <table class="history-card-table">
-    <tr>
-      <td>
-        <img src="{{Model.Image}}">
-      </td>
-      <td>
-        <h3>{{Model.Heading}}</h3>
-        <h4>{{Model.Subheading}}</h4>
-        <h5>{{Model.Location}}</h5>
-        <p>{{Model.Description}}</p>
-      </td>
-    </tr>
-  </table>
+<div class="history-card" [ngClass.lg]="'history-card-lg'" [ngClass.md]="'history-card-md'" 
+  [ngClass.sm]="'history-card-sm'" fxHide.xs>
+  <div fxLayout="row">
+    <div fxFlex.sm="35" fxFlex.gt-sm="30" fxLayout="column">
+      <img [src]="Model.Image">
+    </div>
+    <div fxFlex.sm="65" fxFlex.gt-sm="70"fxLayout="column">
+      <h3>{{Model.Heading}}</h3>
+      <h4>{{Model.Subheading}}</h4>
+      <h5>{{Model.Location}}</h5>
+      <p>{{Model.Description}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="history-card history-card-xs" fxHide.gt-xs>
+  <div fxLayout="column">
+    <div fxFlex="10"><h3>{{Model.Heading}}</h3></div>
+    <div fxFlex="10"><h4>{{Model.Subheading}}</h4></div>
+    <div fxFlex="10"><h5>{{Model.Location}}</h5></div>
+    <div fxFlex="30"><img [src]="Model.Image"></div>
+    <div fxFlex="40"><p>{{Model.Description}}</p></div>
+  </div>
 </div>
