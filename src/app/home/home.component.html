@@ -1,7 +1,23 @@
-
-<div class="history"> 
-  <h2 class="heading-lines"><span>Education</span></h2>
-  <div *ngFor="let model of HistoryModels">
-    <app-history-card [Model]="model"></app-history-card>
-  </div>
+<h1 class="home-header">{{header}}</h1>
+<div class="home-card">
+  <table class="home-table">
+    <tr>
+      <td class="home-table-left">
+        <img class="home-portrait" src="/assets/img/Home.jpg">
+      </td>
+      <td class="home-table-right">
+        <p>
+          {{body}}
+        </p>
+        <p class="home-socials">
+          <a href="https://www.fb.me/djsitte"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.twitter.com/djsitte"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/djsitte"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://www.instagram.com/djsitte/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </p>
+      </td>
+    </tr>
+  </table>
 </div>
+
+

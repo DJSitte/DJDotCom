@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HistoryModel } from '../models/models';
+import { CardModel } from '../models/models';
 
 @Component({
   selector: 'app-history-card',
@@ -8,7 +8,7 @@ import { HistoryModel } from '../models/models';
 })
 export class HistoryCardComponent implements OnInit {
   @Input()
-  Model: HistoryModel;
+  Model: CardModel;
   
   constructor() { }
 

@@ -1,10 +1,12 @@
 <div class="app">
-    <mat-toolbar class="dj-toolbar">
-        <span>D.J. Sitte</span>
+    <mat-toolbar class="dj-toolbar" *ngIf="topNav">
+        <span *ngFor="let link of topNav.leftLinks" class="toolbar-link">
+            <a [routerLink]="link.url">{{link.linkText}}</a>
+        </span>
         <span class="fill-remaining-toolbar"></span>
-        <span class="toolbar-link"><a href="/education">Education</a></span>
-        <span class="toolbar-link"><a href="/projects">Projects</a></span>
-        <span class="toolbar-link"><a href="/contact">Contact</a></span>
+        <span *ngFor="let link of topNav.rightLinks" class="toolbar-link">
+                <a [routerLink]="link.url">{{link.linkText}}</a>
+        </span>
     </mat-toolbar>
     <div class="container">
         <router-outlet></router-outlet>

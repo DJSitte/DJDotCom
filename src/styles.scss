@@ -10,8 +10,12 @@ body{
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 64px);
     padding-top: 64px;
+}
+
+.app{
+    min-height: 100vh;
 }
 
 /* Custom Angular Material Theme */

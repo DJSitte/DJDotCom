@@ -2,7 +2,6 @@
 
 .app{
     color: $fg-color;
-    height: 100%;
 }
 
 .dj-toolbar{
@@ -19,17 +18,6 @@
     top: 0;
     left: 0;
     z-index: -2;
-}
-
-.background-cover{
-    background-color: rgba(black, .8);
-    background-size: cover;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .fill-remaining-toolbar{

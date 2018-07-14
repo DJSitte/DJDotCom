@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule, APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule, Routes, Router } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -12,11 +12,14 @@ import { EducationComponent } from './education/education.component';
 import { CurrentProjectsComponent } from './current-projects/current-projects.component';
 import { HistoryCardComponent } from './history-card/history-card.component';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'education', component: EducationComponent},
-  { path: 'projects', component: CurrentProjectsComponent}
-]
+import { FlamelinkService } from './services/flamelink.service';
+import { CardPageComponent } from './card-page/card-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RoutingService } from './services/routing.service';
+
+import { routes } from './routes';
+import { initalizeRoutes } from './routeInitializer';
+import { PlainPageComponent } from './plain-page/plain-page.component';
 
 @NgModule({
   declarations: [
@@ -24,18 +27,32 @@ const appRoutes: Routes = [
     HomeComponent,
     EducationComponent,
     CurrentProjectsComponent,
-    HistoryCardComponent
+    HistoryCardComponent,
+    CardPageComponent,
+    PageNotFoundComponent,
+    PlainPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    RouterModule.forRoot(appRoutes, {
+    RouterModule.forRoot(routes, {
       enableTracing: true
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    FlamelinkService,
+    RoutingService,
+    {
+      provide: APP_INITIALIZER, 
+      useFactory: initalizeRoutes, 
+      deps: [RoutingService], 
+      multi: true
+    }
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
+  entryComponents: [CardPageComponent]
 })
 export class AppModule { }

@@ -1,9 +1,5 @@
 @import '../../assets/scss/variables';
 
-.home-component{
-    text-align: center;
-    padding-top: 30vh;
-}
 
 .home-subtext{
     position: absolute;
@@ -13,10 +9,43 @@
     text-align: center;
 }
 
-.history{
-    text-align: center;
-    h2{
-        width: 100%;
-    }
+.home-card{
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $fg-color;
+    border: 3px solid $bg-color;
+    margin-top: 20px;
+    border-radius: 20px;
 }
 
+.home-header{
+    text-align: center;
+    font-size: 36px;
+}
+
+.home-portrait{
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.home-table-left{
+    vertical-align: middle;
+}
+
+.home-table-right{
+    color: $bg-color;
+    font-size: 26px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.home-socials{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    a {
+        color: $bg-color;
+    }
+}

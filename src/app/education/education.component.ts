@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardModel } from '../models/models';
+import { FlamelinkService } from '../services/flamelink.service';
 
 @Component({
   selector: 'app-education',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   host: {class: 'component-wrapper'}
 })
 export class EducationComponent implements OnInit {
-
-  constructor() { }
+  educationCardModels: CardModel[] = []
+  constructor(protected flamelink: FlamelinkService) {
+    flamelink.getEducationCards().then(cards => this.educationCardModels = cards)
+  }
 
   ngOnInit() {
   }

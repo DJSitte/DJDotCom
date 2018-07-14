@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoryModel } from '../models/models';
+import { FlamelinkService } from '../services/flamelink.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,15 @@ import { HistoryModel } from '../models/models';
 })
 
 export class HomeComponent implements OnInit {
-  HistoryModels: HistoryModel[] = [
-    new HistoryModel("/assets/img/MSOE.png", "Milwaukee School of Engineer", "B.S. Software Engineering, 2017", "Milwaukee, WI", "Milwaukee School of Engineering is a private, non-profit university offering bachelor’s and master’s degrees in engineering, business, and nursing. At MSOE, you will find a caring community of students and faculty. Together, they are committed to fostering a higher standard of academic programming and research, and personalized service, instruction, and guidance."),
-    new HistoryModel("/assets/img/Gibraltar.jpg", "Gibraltar Schools", "Class of 2013", "Fish Creek, WI", "Gibraltar Area Schools is a school district headquartered in Fish Creek, an unincorporated area in the town of Gibraltar, Wisconsin. It has two schools: Gibraltar Elementary School (PK-6) and Gibraltar Secondary School (7-12). It serves communities in northern Door County, including Fish Creek, Baileys Harbor, Ephraim, Egg Harbor, Ellison Bay, Gills Rock, and Sister Bay. As of 2014 about 578 students attend schools in this district.")
-  ]
-
-  constructor() { }
+  body: string = "";
+  header: string = "";
+  
+  constructor(protected flamelink: FlamelinkService) {
+    flamelink.getHomePage().then(hp => {
+      this.body = hp.body;
+      this.header = hp.header;
+    });
+  }
 
   ngOnInit() {
   }
