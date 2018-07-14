@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-plain-page',
   templateUrl: './plain-page.component.html',
-  styleUrls: ['./plain-page.component.scss']
+  styleUrls: ['./plain-page.component.scss'],
+  host: {class: 'component-wrapper'}
 })
 export class PlainPageComponent implements OnInit {
 

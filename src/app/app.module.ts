@@ -53,6 +53,9 @@ import { PlainPageComponent } from './plain-page/plain-page.component';
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [CardPageComponent]
+  entryComponents: [
+    CardPageComponent,
+    PlainPageComponent
+  ]
 })
 export class AppModule { }

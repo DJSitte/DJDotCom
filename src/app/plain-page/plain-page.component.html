@@ -1,4 +1,6 @@
-<div [class]="cssClass">
-  <h1>{{heading}}</h1>
-  <div>{{content}}</div>
+<div class="plain-page">
+  <div [class]="cssClass">
+    <h1 class="plain-page-heading">{{heading}}</h1>
+    <div [innerHTML]="content"></div>
+  </div>
 </div>
